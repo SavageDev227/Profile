@@ -1,0 +1,12 @@
+name: Profile
+version: '${project.version}'
+main: com.savage.plugins.profile.Profile
+api-version: 1.19
+authors: [ four0four, loving11ish ]
+website: https://github.com/loving11ish, https://github.com/Savagegamez227
+commands:
+  profile:
+    description: Opens a menu of players, where you can see certain attributes of that player
+  saveconfig:
+    description: Saves config.yml file
+    permission: profile.save
