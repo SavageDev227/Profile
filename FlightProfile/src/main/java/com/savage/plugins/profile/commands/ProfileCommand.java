@@ -25,7 +25,7 @@ public class ProfileCommand implements CommandExecutor {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(args.length == 1) {
-                Player p = Bukkit.getPlayerExact(args[0]);
+                Player p = Bukkit.getPlayer(args[0]);
                 UUID uuid = p.getUniqueId();
                 OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(uuid);
                 Profile.getPlayerMenuUtility(p).setPlayerToMod(offlinePlayer);

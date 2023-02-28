@@ -1,7 +1,6 @@
 package com.savage.plugins.profile;
 
 
-import com.savage.plugins.profile.Chat.ChatFilter;
 import com.savage.plugins.profile.commands.ProfileCommand;
 import com.savage.plugins.profile.commands.SaveConfigCommand;
 import com.savage.plugins.profile.guis.ProfileGUI;
@@ -35,7 +34,6 @@ public final class Profile extends JavaPlugin {
         getCommand("profile").setExecutor(new ProfileCommand());
         getCommand("saveconfig").setExecutor(new SaveConfigCommand());
         getServer().getPluginManager().registerEvents(new Menulisteners(), this);
-        getServer().getPluginManager().registerEvents(new ChatFilter(), this);
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         if(!setupEconomy()) {

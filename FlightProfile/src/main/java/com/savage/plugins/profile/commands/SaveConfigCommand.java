@@ -18,8 +18,6 @@ public class SaveConfigCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(cmd.getName().equalsIgnoreCase("saveconfig")) {
-            plugin.getConfig().options().copyDefaults();
-            plugin.saveDefaultConfig();
             plugin.reloadConfig();
             sender.sendMessage(ChatColor.GREEN + "Config saved and reloaded successfully!");
         }
